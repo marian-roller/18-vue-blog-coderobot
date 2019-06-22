@@ -22,7 +22,6 @@
         .then(res => this.users = res.data)
         .catch(err => console.log(router.onError()));
     }
-
   }
 </script>
 

@@ -12,6 +12,7 @@
           <router-link class="nav-item nav-link" to="/">Home</router-link>
           <router-link class="nav-item nav-link" to="/about">About</router-link>
           <router-link class="nav-item nav-link" to="/users">Users</router-link>
+          <router-link class="nav-item nav-link" to="/posts">Posty</router-link>
 
         </div>
       </div>
