@@ -1,7 +1,7 @@
 <template>
     <div class="posts container">
         <h1 class="text-center">Blog o programowaniu w PHP</h1>
-        <div v-for="post in posts" class="my-5 border p-3">
+        <div v-for="post in posts" class="my-5 border p-3 rounded bg-light">
             <h2>{{ post.title }}</h2>
             <p><small>{{ post.created_at }}</small></p>
             <div class="mb-2">
@@ -26,7 +26,7 @@
             };
         },
         created() {
-            axios.get('http://localhost/~ja/18_php_vue_blog_coderobot/backend/public/index.php/api/posts')
+            axios.get('http://php.coderobot.eu/backend/public/api/posts')
                 .then(res => this.posts = res.data)
                 .catch(err => console.log(router.onError()));
         }

@@ -26,7 +26,7 @@
         },
         created() {
             var id = this.$route.params.id;
-            axios.get('http://localhost/~ja/18_php_vue_blog_coderobot/backend/public/index.php/api/posts/' + id)
+            axios.get('http://php.coderobot.eu/backend/public/api/posts/' + id)
                 .then(res => this.post = res.data)
                 .catch(err => console.log(router.onError()));
         },
