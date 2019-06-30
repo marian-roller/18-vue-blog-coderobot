@@ -19,11 +19,6 @@ export default new Router({
       component: () => import( /* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/users',
-      name: 'users',
-      component: () => import( /* webpackChunkName: "about" */ './components/Users.vue')
-    },
-    {
       path: '/posts',
       name: 'posts',
       component: () => import( /* webpackChunkName: "about" */ './components/Posts.vue')
@@ -32,6 +27,11 @@ export default new Router({
       path: '/posts/:id',
       name: 'post',
       component: () => import( /* webpackChunkName: "about" */ './components/Post.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('./views/Contact.vue')
     },
   ]
 })
