@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-5">
+    <div class="header-container mb-5">
         <div class="header-container position-relative">
             <img class="header-image" v-bind:src="imgComputedPath" alt="">
 

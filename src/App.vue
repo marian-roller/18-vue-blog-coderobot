@@ -19,7 +19,7 @@
       </div>
     </nav>
     <Header />
-    <div class="container">
+    <div id="main-container" class="container">
 
       <div class="row">
 
@@ -33,47 +33,68 @@
 
       </div>
     </div>
-
+    <Footer />
   </div>
 </template>
 
 <script>
   import Header from '@/components/layout/Header';
   import Sidebar from '@/components/layout/Sidebar';
+  import Footer from '@/components/layout/Footer';
   export default {
     name: 'app',
     components: {
       Header,
-      Sidebar
+      Sidebar,
+      Footer
+    },
+    created() {
+      window.onscroll = function () {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementById("navigation-bar").classList.remove("navbar-dark", "bg-transparent");
+          document.getElementById("navigation-bar").classList.add("navbar-light", "bg-white", "border-bottom");
+          var links = document.querySelectorAll(".nav-item");
+          links.forEach((link) => {
+            link.classList.remove("nav-link-color");
+          });
+        } else {
+          document.getElementById("navigation-bar").classList.remove("navbar-light", "bg-white", "border-bottom");
+          document.getElementById("navigation-bar").classList.add("navbar-dark", "bg-transparent");
+          var links = document.querySelectorAll(".nav-item");
+          links.forEach((link) => {
+            link.classList.add("nav-link-color");
+          });
+        }
+      };
+    },
+    mounted() {
+      // sending footer to bottom
+      // var headerContBody = document.querySelector(".header-container");
+      // console.log(headerContBody.offsetHeight);
+      // var headerContMarginBottom = parseInt(getComputedStyle(headerContBody).marginBottom);
+      // console.log(headerContMarginBottom);
+      // var headerContMarginTop = parseInt(getComputedStyle(headerContBody).marginTop);
+      // console.log(headerContMarginTop);
+
+      //console.log(this.$refs);
+      // var mainContMarginBottom = parseInt(getComputedStyle(mainContBody).marginBottom);
+      // console.log(mainContMarginBottom);
+      // var mainContMarginTop = parseInt(getComputedStyle(mainContBody).marginTop);
+      // console.log(mainContMarginTop);
+
     },
   }
-
-
-  window.onscroll = function () {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      //document.getElementById("navigation-bar").classList.remove("navbar-dark", "bg-transparent");
-      // document.getElementById("navigation-bar").classList.add("navbar-light", "bg-white", "border-bottom");
-
-      $("#navigation-bar").removeClass("navbar-dark bg-transparent");
-      $("#navigation-bar").addClass("navbar-light bg-white border-bottom");
-      $(".nav-item").removeClass("nav-link-color");
-
-
-    } else {
-      // document.getElementById("navigation-bar").classList.remove("navbar-light", "bg-white", "border-bottom");
-      // document.getElementById("navigation-bar").classList.add("navbar-dark", "bg-transparent");
-      $("#navigation-bar").removeClass("navbar-light bg-white border-bottom");
-      $("#navigation-bar").addClass("navbar-dark bg-transparent");
-      $(".nav-item").addClass("nav-link-color");
-
-    }
-  };
 </script>
 
 <style>
   #app {
     font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 24px;
   }
+
+  #main-container {}
 
   .navbar-scroll {
     border: 10px solid black;
@@ -89,7 +110,19 @@
     /*font-weight: normal; */
   }
 
+
+
   .nav-link-color {
     color: white !important;
+  }
+
+  .nav-link-color:hover {
+    color: grey !important;
+  }
+
+  .router-link-exact-active:not(.navbar-brand) {
+
+    border-bottom: 1px solid #bbb;
+
   }
 </style>
