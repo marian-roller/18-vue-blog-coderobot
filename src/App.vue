@@ -24,7 +24,7 @@
       <div class="row">
 
         <div class="col-md-8">
-          <router-view />
+          <router-view :key="$route.fullPath" />
         </div>
 
         <div class="col-md-4">
@@ -67,22 +67,6 @@
         }
       };
     },
-    mounted() {
-      // sending footer to bottom
-      // var headerContBody = document.querySelector(".header-container");
-      // console.log(headerContBody.offsetHeight);
-      // var headerContMarginBottom = parseInt(getComputedStyle(headerContBody).marginBottom);
-      // console.log(headerContMarginBottom);
-      // var headerContMarginTop = parseInt(getComputedStyle(headerContBody).marginTop);
-      // console.log(headerContMarginTop);
-
-      //console.log(this.$refs);
-      // var mainContMarginBottom = parseInt(getComputedStyle(mainContBody).marginBottom);
-      // console.log(mainContMarginBottom);
-      // var mainContMarginTop = parseInt(getComputedStyle(mainContBody).marginTop);
-      // console.log(mainContMarginTop);
-
-    },
   }
 </script>
 
@@ -94,8 +78,6 @@
     padding-bottom: 24px;
   }
 
-  #main-container {}
-
   .navbar-scroll {
     border: 10px solid black;
     background: white;
@@ -106,12 +88,6 @@
     font-weight: bold;
   }
 
-  .nav-link.title-font {
-    /*font-weight: normal; */
-  }
-
-
-
   .nav-link-color {
     color: white !important;
   }
@@ -121,8 +97,6 @@
   }
 
   .router-link-exact-active:not(.navbar-brand) {
-
     border-bottom: 1px solid #bbb;
-
   }
 </style>
