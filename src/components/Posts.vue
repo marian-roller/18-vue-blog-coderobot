@@ -1,7 +1,6 @@
 <template>
     <div class="posts container">
-        <h1 class="text-center">Blog o programowaniu w PHP</h1>
-        <div v-for="post in posts" class="my-5 border p-3 rounded bg-light">
+        <div v-for="post in posts" class="mb-5 border p-3 rounded bg-light">
             <h2>{{ post.title }}</h2>
             <p><small>{{ post.created_at }}</small></p>
             <div class="mb-2">
