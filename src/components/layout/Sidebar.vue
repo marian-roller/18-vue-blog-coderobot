@@ -1,12 +1,16 @@
 <template>
     <div class="container">
-        Sidebarek!
+        <Categories />
     </div>
 </template>
 
 <script>
+    import Categories from '@/components/Categories.vue';
     export default {
-        name: 'sidebar'
+        name: 'sidebar',
+        components: {
+            Categories
+        }
     }
 </script>
 

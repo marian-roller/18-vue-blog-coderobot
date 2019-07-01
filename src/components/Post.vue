@@ -6,7 +6,7 @@
         <p>
             <small>Kategorie:
                 <span class="bg-light mx-2 border px-1 rounded-sm" v-for="category in post.categories">
-                    <strong>{{category}}</strong>
+                    <strong>{{ category }}</strong>
                 </span>
             </small>
         </p>

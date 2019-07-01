@@ -21,12 +21,22 @@ export default new Router({
     {
       path: '/posts',
       name: 'posts',
-      component: () => import( /* webpackChunkName: "about" */ './components/Posts.vue')
+      component: () => import('./components/Posts.vue')
     },
     {
       path: '/posts/:id',
       name: 'post',
-      component: () => import( /* webpackChunkName: "about" */ './components/Post.vue')
+      component: () => import('./components/Post.vue')
+    },
+    {
+      path: '/categories',
+      name: 'categories',
+      component: () => import('./components/Categories.vue')
+    },
+    {
+      path: '/categories/:id',
+      name: 'category',
+      component: () => import('./components/Category.vue')
     },
     {
       path: '/contact',
