@@ -1,5 +1,5 @@
 <template>
-    <div class="posts container">
+    <div class="posts container mb-5">
         <div v-for="post in posts" class="mb-5 border p-3 rounded bg-light">
             <h2>{{ post.title }}</h2>
             <p><small>{{ post.created_at }}</small></p>

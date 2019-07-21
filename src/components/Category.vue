@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container mb-5">
         <h2>{{ category.title }}</h2>
 
         <div v-if="category.category_posts.length === 0">
