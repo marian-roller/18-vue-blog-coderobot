@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container mb-5">
         <h1>{{ post.title }}</h1>
         <p class="mb-0"><small>Utworzony: <strong>{{ post.created_at }}</strong></small></p>
         <p class="mb-0"><small>Zmodyfikowany: <strong>{{ post.updated_at }}</strong></small></p>
@@ -10,7 +10,7 @@
                 </span>
             </small>
         </p>
-        <p> {{ post.body }}</p>
+        <p v-html="post.body"></p>
 
     </div>
 </template>

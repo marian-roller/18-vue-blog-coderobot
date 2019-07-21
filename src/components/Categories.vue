@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mb-5">
         <h5>Kategorie:</h5>
         <div v-for="category in categories">
             <router-link v-bind:to="'/categories/' + category.id" class="">{{ category.title }}

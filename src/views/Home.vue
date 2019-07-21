@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="container">
+    <div class="container mb-5">
       <p>{{ homepage.body }}</p>
     </div>
 
