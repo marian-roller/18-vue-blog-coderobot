@@ -6,12 +6,13 @@
             <p>Brak postów w tej kategorii</p>
         </div>
         <div v-else>
-            <small>Posty w tej kategorii:
+            <div>Posty w tej kategorii:
                 <div class="" v-for="post, key in category.category_posts">
-                    <router-link v-bind:to="'/posts/' + key" class=""><strong>{{ post }}</strong>
+                    <router-link v-bind:to="'/posts/' + key">
+                        <div class="my-3 font-weight-bold">{{ post }}</div>
                     </router-link>
                 </div>
-            </small>
+            </div>
         </div>
     </div>
 </template>
@@ -30,7 +31,7 @@
             axios.get('http://php.coderobot.eu/backend/public/api/categories/' + id)
                 .then(res => this.category = res.data)
                 .catch(err => console.log(router.onError()));
-            console.log(this.category);
+            console.log(data.category);
         },
     }
 </script>

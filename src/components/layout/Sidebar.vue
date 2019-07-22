@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container sidebar-container">
         <Categories />
     </div>
 </template>
@@ -15,5 +15,5 @@
 </script>
 
 <style scoped>
-
+    .sidebar-container {}
 </style>
