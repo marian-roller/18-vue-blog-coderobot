@@ -2,7 +2,6 @@
   <div id="app">
     <div class="app-container">
 
-
       <nav id="navigation-bar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
 
         <router-link class="navbar-brand title-font" to="/">PHP Blog</router-link>
@@ -78,9 +77,13 @@
 <style>
   #app {
     font-family: 'Ubuntu', sans-serif;
-
     position: relative;
     padding-bottom: 24px;
+    background: #d9e1fc;
+  }
+
+  #main-container {
+    font-size: 18px;
   }
 
   .app-container {
